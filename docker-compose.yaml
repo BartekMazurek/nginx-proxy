@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+
+    nginx_proxy:
+        hostname: nginx_proxy
+        container_name: nginx_proxy
+        build:
+            context: .
+            dockerfile: ./docker/nginx/proxy/Dockerfile
+        ports:
+            - '80:80'
+
+    nginx_1:
+        hostname: nginx_1
+        container_name: nginx_1
+        build:
+            context: .
+            dockerfile: ./docker/nginx/1/Dockerfile
+
+    php1:
+        hostname: php_1
+        container_name: php_1
+        build:
+            context: .
+            dockerfile: ./docker/php/1/Dockerfile
+
+    nginx_2:
+        hostname: nginx_2
+        container_name: nginx_2
+        build:
+            context: .
+            dockerfile: ./docker/nginx/2/Dockerfile
+
+    php2:
+        hostname: php_2
+        container_name: php_2
+        build:
+            context: .
+            dockerfile: ./docker/php/2/Dockerfile
+
+    nginx_3:
+        hostname: nginx_3
+        container_name: nginx_3
+        build:
+            context: .
+            dockerfile: ./docker/nginx/3/Dockerfile
+
+    php3:
+        hostname: php_3
+        container_name: php_3
+        build:
+            context: .
+            dockerfile: ./docker/php/3/Dockerfile
